@@ -26,6 +26,22 @@ const routes: Routes = [
   {
     path: 'alerta',
     loadChildren: () => import('./pages/alerta/alerta.module').then( m => m.AlertaPageModule)
+  },
+  {
+    path: 'actionsheet',
+    loadChildren: () => import('./pages/actionsheet/actionsheet.module').then( m => m.ActionsheetPageModule)
+  },
+  {
+    path: 'badge',
+    loadChildren: () => import('./pages/badge/badge.module').then( m => m.BadgePageModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./pages/card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'checkbox',
+    loadChildren: () => import('./pages/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
   }
 ];
 
