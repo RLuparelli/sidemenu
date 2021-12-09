@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Select</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Lista de Selecao </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Escolha Aqui">
+        <ion-select-option value="f">Mulher</ion-select-option>
+        <ion-select-option value="m">Homem</ion-select-option>
+        <ion-select-option value="mf">LGBTQERF+-/2$%#</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cores de Cabelo</ion-label>
+      <ion-select value="marrom" okText="Okay" cancelText="Cancelar">
+        <ion-select-option value="marrom">Marrom</ion-select-option>
+        <ion-select-option value="loiro">Loiro</ion-select-option>
+        <ion-select-option value="preto">Preto</ion-select-option>
+        <ion-select-option value="ruivo">Ruivo</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Selecao multipla </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Adicionais</ion-label>
+      <ion-select multiple="true" cancelText="Nao" okText="Sim!">
+        <ion-select-option value="bacon">Bacon</ion-select-option>
+        <ion-select-option value="azeitona">Azeitona preta</ion-select-option>
+        <ion-select-option value="+queijo">Queijo</ion-select-option>
+        <ion-select-option value="pimenta">Pimenta</ion-select-option>
+        <ion-select-option value="salada">Salada</ion-select-option>
+        <ion-select-option value="cebola">Cebola</ion-select-option>
+        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+        <ion-select-option value="abacaxi">Abacaxi</ion-select-option>
+        <ion-select-option value="molho">Molho</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pets</ion-label>
+      <ion-select multiple="true" [value]="['bird', 'dog']">
+        <ion-select-option value="bird">Passaro</ion-select-option>
+        <ion-select-option value="cat">Gato</ion-select-option>
+        <ion-select-option value="dog">Cachorro</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Usuarios com ngFor </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Usuario</ion-label>
+      <ion-select [compareWith]="compareWith">
+        <ion-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Interfaces </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
+        <ion-select-option value="bacon">Bacon</ion-select-option>
+        <ion-select-option value="azeitona">Azeitona preta</ion-select-option>
+        <ion-select-option value="+queijo">Queijo</ion-select-option>
+        <ion-select-option value="pimenta">Pimenta</ion-select-option>
+        <ion-select-option value="salada">Salada</ion-select-option>
+        <ion-select-option value="cebola">Cebola</ion-select-option>
+        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+        <ion-select-option value="abacaxi">Abacaxi</ion-select-option>
+        <ion-select-option value="molho">Molho</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Popover</ion-label>
+      <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+        <ion-select-option value="bird">Passaro</ion-select-option>
+        <ion-select-option value="cat">Gato</ion-select-option>
+        <ion-select-option value="dog">Cachorro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Action Sheet</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="marrom">Marrom</ion-select-option>
+        <ion-select-option value="loiro">Loiro</ion-select-option>
+        <ion-select-option value="preto">Preto</ion-select-option>
+        <ion-select-option value="ruivo">Ruivo</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

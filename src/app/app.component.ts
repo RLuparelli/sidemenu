@@ -22,7 +22,10 @@ export class AppComponent {
     { title: 'Input', url: 'input', icon: 'cloud-upload' },
     { title: 'List', url: 'list', icon: 'albums' },
     { title: 'Progress Bar', url: 'progressbar', icon: 'bar-chart' },
-    { title: 'Refresher', url: 'refresher', icon: 'refresh' }
+    { title: 'Refresher', url: 'refresher', icon: 'refresh' },
+    { title: 'Reorder', url: 'reorder', icon: 'refresh' },
+    { title: 'Toggle', url: 'toggle', icon: 'refresh' },
+    { title: 'Search-Bar', url: 'searchbar', icon: 'refresh' }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
