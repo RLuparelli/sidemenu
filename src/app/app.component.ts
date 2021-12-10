@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -23,10 +24,16 @@ export class AppComponent {
     { title: 'List', url: 'list', icon: 'albums' },
     { title: 'Progress Bar', url: 'progressbar', icon: 'bar-chart' },
     { title: 'Refresher', url: 'refresher', icon: 'refresh' },
-    { title: 'Reorder', url: 'reorder', icon: 'refresh' },
-    { title: 'Toggle', url: 'toggle', icon: 'refresh' },
-    { title: 'Search-Bar', url: 'searchbar', icon: 'refresh' },
-    { title: 'Segment', url: 'segment', icon: 'refresh' }
+    { title: 'Reorder', url: 'reorder', icon: 'reorder-four' },
+    { title: 'Toggle', url: 'toggle', icon: 'toggle' },
+    { title: 'Search-Bar', url: 'searchbar', icon: 'search' },
+    { title: 'Segment', url: 'segment', icon: 'apps' },
+    { title: 'Slides', url: 'slides', icon: 'albums' },
+    { title: 'Toast', url: 'toast', icon: 'chatbubbles' },
+    { title: 'Modal', url: 'modal', icon: 'invert-mode' },
+    { title: 'Popover', url: 'popover', icon: 'paper-plane' },
+    { title: 'Radio', url: 'radio', icon: 'radio' },
+    { title: 'Animation', url: 'animation', icon: 'shuffle' }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
